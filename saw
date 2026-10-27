@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
+    int total_numbers;
+    if (!(std::cin >> total_numbers)) {
+        return 0; // 
+    }
+
+    int even_count = 0;
+    int odd_count = 0;
+
+    for (int i = 0; i < total_numbers; ++i) {
+        int current_number;
+        if (std::cin >> current_number) {
+            if (current_number % 2 == 0) {
+                even_count++;
+            } else {
+                odd_count++;
+            }
+        }
+    }
+
+    std::cout << even_count << " " << odd_count << "\n";
+    return 0;
+}
